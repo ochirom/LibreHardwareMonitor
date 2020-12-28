@@ -30,6 +30,11 @@
     <Reference Include="System.Configuration.Install" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Properties.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Properties.settings</DependentUpon>
+    </Compile>
     <Compile Update="UI\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
@@ -71,5 +76,11 @@
     <EmbeddedResource Include="Resources\**" />
     <None Include="Resources\app.manifest" />
     <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Properties.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>
